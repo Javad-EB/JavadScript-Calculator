@@ -1,0 +1,162 @@
+:root {
+    --blue-050: #ddd9ff;
+    --blue-100: #bcb5ff;
+    --blue-200: #9488ff;
+    --blue-300: #7066ff;
+    --blue-400: #4a3ef9;
+    --blue-500: #3b27f3;
+    --blue-600: #3711de;
+    --blue-700: #2a07c5;
+    --blue-800: #2007ad;
+    --blue-900: #160384;
+
+    --grey-050: #f5f7fa;
+    --grey-100: #e4e7eb;
+    --grey-200: #cbd2d9;
+    --grey-300: #9aa5b1;
+    --grey-400: #7b8794;
+    --grey-500: #616e7c;
+    --grey-600: #52606d;
+    --grey-700: #3e4c59;
+    --grey-800: #323f4b;
+    --grey-900: #1f2933;
+}
+*, *::before, *::after {
+    box-sizing: border-box;
+    font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+    font-weight: 300;
+}
+body {
+    padding: 0;
+    margin: 0;
+    background: linear-gradient(235deg, #e97f42, #677ee7);;
+}
+
+.calc-temp {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+}
+.calc_display {
+    background-color: var(--grey-900);
+    padding: 0.5rem 1rem;
+    width: auto;
+    text-align: right;
+    grid-area: calc_display;
+}
+.old-operand {
+    color: var(--grey-200);
+    font-size: calc(1rem * 1.2 * 1.2);
+}
+.new-operand {
+    color: var(--grey-050);
+    font-size: calc(1.3rem * 1.2 * 1.2);
+}
+.calc-keys {
+    display: grid;
+    grid-gap: 2px;
+    grid-template-columns: repeat(4,70px);
+    grid-template-rows: repeat(6, 70px);
+    grid-template-areas: 
+    "calc_display calc_display calc_display calc_display"
+    "clear clear delete divide"
+    "seven eight nine times"
+    "four five six minus"
+    "one two three sum"
+    "sign zero decimal equal";
+}
+button {
+    cursor: pointer;
+    font-size: 2rem;
+    border: 1px solid white;
+    outline: none;
+    background-color: var(--blue-100);
+}
+button:hover{
+    background-color: var(--grey-500);
+}
+.clear {
+    grid-area: clear;
+}
+.delete {
+    grid-area: delete;
+}
+.divide,
+.times,
+.minus,
+.sum,
+.equal {
+    background: var(--blue-500);
+}
+.divide:hover,
+.times:hover,
+.minus:hover,
+.sum:hover,
+.equal:hover {
+    background: var(--blue-900);
+}
+.clear,
+.delete {
+    background: rebeccapurple;
+}
+.clear:hover,
+.delete:hover {
+    background: rgb(199, 161, 238);
+}
+.divide {
+    grid-area: divide;
+}
+.times {
+    grid-area: times;
+}
+.minus {
+    grid-area: minus;
+}
+.sum {
+    grid-area: sum;
+}
+.sign {
+    grid-area: sign;
+    background: red;
+}
+.sign:hover{
+    background: rgb(235, 136, 136);
+}
+.decimal {
+    grid-area: decimal;
+}
+.equal {
+    grid-area: equal;
+}
+
+.zero {
+    grid-area: zero;
+}
+.one {
+    grid-area: one;
+}
+.two {
+    grid-area: two;
+}
+.three {
+    grid-area: three;
+}
+.four {
+    grid-area: four;
+}
+.five {
+    grid-area: five;
+}
+.six {
+    grid-area: six;
+}
+.seven {
+    grid-area: seven;
+}
+.eight {
+    grid-area: eight;
+}
+.nine {
+    grid-area: nine;
+}
